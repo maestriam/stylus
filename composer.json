@@ -1,0 +1,12 @@
+{
+    "name": "maestriam/stylus",
+    "description": "A new awsome theme is comming!",
+    "type": "blade-theme",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Giuliano Sampaio", 
+            "email": "giuguitar@gmail.com"
+        }
+    ]
+}
