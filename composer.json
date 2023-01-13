@@ -8,5 +8,13 @@
             "name": "Giuliano Sampaio", 
             "email": "giuguitar@gmail.com"
         }
-    ]
+    ],
+    "require": {
+        "composer/installers": "^2.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
 }
