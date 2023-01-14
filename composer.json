@@ -10,11 +10,7 @@
         }
     ],
     "require": {
-        "composer/installers": "^2.2"
-    },
-    "config": {
-        "allow-plugins": {
-            "composer/installers": true
-        }
+        "maestriam/installers": "dev-master"
+        
     }
 }
