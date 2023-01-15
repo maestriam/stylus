@@ -8,7 +8,7 @@
                     <img 
                         alt="logo" 
                         width="100" 
-                        src="{{ isset($logotype) ? $logotype : @public('img/stisla-fill.svg') }}" 
+                        src="@public('img/stisla-fill.svg')" 
                         class="shadow-light rounded-circle" />
                 </div>
                 <!-- /logotipo -->
