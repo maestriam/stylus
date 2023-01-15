@@ -6,15 +6,14 @@
     
     
     <!-- input -->
-    <input 
-        type="email" 
-        required autofocus
-        id="{{ $id ?? 'email-id' }}" 
-        name="{{ $name ?? 'email' }}" 
-        tabindex="{{ $tabindex ?? '1' }}" 
-        {{ isset($model) ? 'wire:model=' . $model : null }}
-        class="{{ isset($class) ? $class . 'form-control' : 'form-control' }}" 
-    />
+    <x-input 
+        :type="'email'" 
+        :value="$value" 
+        :name="$name"
+        :tabindex="1"
+        :model="$model"
+        :required="true" 
+        :autofocus='true'/>
     <!-- /input -->
     
     
