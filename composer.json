@@ -10,7 +10,6 @@
         }
     ],
     "require": {
-        "maestriam/installers": "dev-master"
-        
+        "maestriam/installers": "dev-master"        
     }
 }
