@@ -18,8 +18,9 @@
     <!-- /input -->
     
     
-    <!-- placeholder -->
+    <!-- error message -->
     @error($name ?? 'email')
-    <div>{{ $message }}</div>
+    <div class="text-danger">{{ $message }}</div>
     @enderror
+    <!-- /error message -->
 </div>

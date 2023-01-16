@@ -11,9 +11,9 @@
 
 <body>
   <div id="app">
-
-    {{ $slot }}
-
+    <div class="main-wrapper main-wrapper-1">
+      {{ $slot }}
+    </div>
   </div>
 
   <x-js-scripts />

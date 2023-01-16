@@ -19,19 +19,21 @@
     
     <!-- input -->
     <input 
-        id="{{$id ?? 'password'}}" 
         required
         type="password" 
-        name="{{$name ?? 'email'}}" 
+        id="{{$id ?? 'password-id'}}" 
+        name="{{$name ?? 'password'}}" 
         tabindex="{{ $tabindex ?? '1' }}" 
         {{ isset($model) ? 'wire:model=' . $model : null }}
         class="{{ isset($class) ? $class . 'form-control' : 'form-control' }}" 
     />
     <!-- /input -->
     
-    <div class="invalid-feedback">
-        {{$placeholder ?? 'please fill in your password' }}
-    </div>
+    <!-- error message -->
+    @error($name ?? 'password')
+    <div class="text-danger">{{ $message }}</div>
+    @enderror
+    <!-- /error message -->
 </div>
 
 @if(isset($rememberMe)) 
