@@ -1,7 +1,7 @@
 <div class="main-sidebar sidebar-style-2">
   <aside id="sidebar-wrapper">
-
-    <div class="sidebar-brand">
+    
+    <div class="sidebar-brand">      
       <a href="{{ route('maestro.admin.home') }}">{{ $title ?? 'Stisla' }}</a>
     </div>
     
@@ -9,10 +9,11 @@
       <a href="{{ route('maestro.admin.home') }}">{{ $abbr ?? 'St' }}</a>
     </div>
 
-    <ul class="sidebar-menu">      
+    <ul class="sidebar-menu">    
+      <li class="menu-header">Dashboard</li>  
       @foreach($modules as $module)
       <li class="nav-item dropdown">
-        <a href="#" class="nav-link">
+        <a href="/{{ strtolower($module->name()) . '/' }}" class="nav-link">
           <i class="fas fa-fire"></i><span>{{ $module->name() }}</span>
         </a>
       </li>

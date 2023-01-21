@@ -6,7 +6,7 @@
     <x-navbar />
 
     <!-- Main Content -->
-    <div class="main-content">
+    <div class="main-content" style="transition: none !important;">
         <x-content></x-content>
     </div>
         
