@@ -8,8 +8,11 @@
     id="{{ $id ?? 'input-id' }}" 
     name="{{ $name ?? 'input' }}"     
     tabindex="{{ $tabindex ?? '1' }}" 
-    class="{{ isset($class) ? $class : 'form-control' }}" 
-
+    class="
+    {{ isset($class) ? $class : 'form-control' }}
+    {{ $errors->has($name ?? 'input') ? 'is-invalid' : '' }}
+    " 
+        
     @if (isset($model)) {{ 'wire:model=' . $model }}  @endif    
     @if (isset($required)) 'required' @endif
     @if (isset($autofocus)) 'autofocus' @endif

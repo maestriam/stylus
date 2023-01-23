@@ -1,4 +1,4 @@
-<div class="card">        
+<div class="card {{ $class ?? '' }}">        
 
     <!-- header -->
     <div class="card-header">

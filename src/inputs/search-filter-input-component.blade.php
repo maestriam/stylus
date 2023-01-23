@@ -10,9 +10,7 @@
 
         <div class="input-group-btn">
             <!-- Btn search -->
-            <button 
-                class="btn btn-primary" 
-                wire:click="click">
+            <button class="btn btn-primary">
                 <i class="fas fa-search"></i>
             </button>
             <!-- /Btn search -->

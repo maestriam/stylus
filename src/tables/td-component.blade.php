@@ -1,3 +1,3 @@
-<td> 
+<td width="{{ $width ?? '' }}"> 
     {{ $slot }}
 </td>
