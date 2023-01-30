@@ -14,5 +14,8 @@
 <!-- Template JS File -->
 <script src="@public('js/scripts.js')"></script>
 <script src="@public('js/custom.js')"></script>
+<script src="@public('node_modules/sweetalert/dist/sweetalert.min.js')"></script>
+
+@stack('scripts')
 
 <livewire:scripts />

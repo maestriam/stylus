@@ -14,7 +14,7 @@
       @foreach($modules as $module)
       <li class="nav-item dropdown">
         <a href="/{{ strtolower($module->name()) . '/' }}" class="nav-link">
-          <i class="fas fa-fire"></i><span>{{ $module->name() }}</span>
+          <i class="fas fa-{{ $module->info()->icon ?? 'box' }}"></i><span>{{ $module->name() }}</span>
         </a>
       </li>
       @endforeach
