@@ -12,5 +12,11 @@
     "require": {
         "maestriam/installers": "dev-master",
         "maestriam/samurai": "dev-master"        
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "php artisan samurai:publish maestriam/stylus",
+            "php artisan samurai:use maestriam/stylus"
+        ]
     }
 }
