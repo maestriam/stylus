@@ -18,5 +18,10 @@
             "@php artisan samurai:publish maestriam/stylus",
             "@php artisan samurai:use maestriam/stylus"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
     }
 }

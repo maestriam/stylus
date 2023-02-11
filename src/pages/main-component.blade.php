@@ -3,7 +3,9 @@
         
     <x-sidebar />
 
-    <x-navbar />
+    <x-navbar>      
+        <x-user-dropdown />
+    </x-navbar>
 
     <!-- Main Content -->
     <div class="main-content" style="transition: none !important;">
