@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "maestriam/installers": "dev-master",
-        "maestriam/samurai": "dev-master"        
+        "maestriam/installers": "^0.0.1",
+        "maestriam/samurai": "^3.1.2"        
     },
     "scripts": {
         "post-autoload-dump": [
