@@ -15,6 +15,7 @@
 <script src="@public('js/scripts.js')"></script>
 <script src="@public('js/custom.js')"></script>
 <script src="@public('node_modules/sweetalert/dist/sweetalert.min.js')"></script>
+<script src="@public('node_modules/select2/dist/js/select2.full.min.js')"></script>
 
 @stack('scripts')
 

@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "maestriam/installers": "^0.0.1",
-        "maestriam/samurai": "^3.1.2"        
+        "maestriam/installers": "dev-master",
+        "maestriam/samurai": "dev-master"        
     },
     "scripts": {
         "post-autoload-dump": [
@@ -21,7 +21,8 @@
     },
     "config": {
         "allow-plugins": {
-            "composer/installers": true
+            "composer/installers": true,
+            "maestriam/installers": true
         }
     }
 }
