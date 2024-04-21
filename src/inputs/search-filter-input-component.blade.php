@@ -1,19 +1,7 @@
-<form>
-    <div class="input-group">
+<form wire:key="search-id">
         
-        <!-- -->
-        <input type="text" 
-            class="form-control" 
-            wire:model="search" 
-            placeholder="{{$placeholder ?? 'Search'}}" />
-        <!-- -->
+    <form class="card-header-form">
+        <input type="text" wire:model.live="search" class="form-control" placeholder="{{ $placeholder ?? 'Search' }}">
+    </form>
 
-        <div class="input-group-btn">
-            <!-- Btn search -->
-            <button class="btn btn-primary">
-                <i class="fas fa-search"></i>
-            </button>
-            <!-- /Btn search -->
-        </div>        
-    </div>
 </form>

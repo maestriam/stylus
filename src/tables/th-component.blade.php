@@ -1,1 +1,1 @@
-<th colspan="{{ $cols ?? '' }}">{{ $slot }}</th>
+<th colspan="{{ $cols ?? '' }}" width="{{ $width ?? '' }}">{{ $slot }}</th>

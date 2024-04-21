@@ -2,16 +2,8 @@
 
     <!-- header -->
     <div class="card-header">
-
+        
         <h4>{{ $title ?? 'Card Title' }}</h4>        
-
-        <!-- search bar-->
-        <div class="card-header-form pr-3">        
-            @if(isset($filters))    
-                {{ $filters }}        
-            @endif
-        </div>
-        <!-- /search bar-->
         
         <div class="card-header-action">            
             @if(isset($actions))    
@@ -20,6 +12,16 @@
         </div>            
     </div>
     <!-- /header -->
+
+    @if(isset($filters))
+    <div class="card-header">
+        <!-- search bar-->
+        <div class="col-lg-12 pr-0 pl-0">                
+            {{ $filters }}                
+        </div>
+        <!-- /search bar-->
+    </div>
+    @endif
     
     <div class="card-body {{ isset($padding) ? 'p-' . $padding : '' }} ">
         {{ $slot }}
