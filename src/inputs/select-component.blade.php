@@ -2,8 +2,10 @@
     @if(isset($label))
         <label for="{{ $id ?? 'input-id' }}">{{ $label }}</label>
     @endif    
-    <select  
-        multiple="{{ $multiple ?? false }}"
+    <select
+        @if(isset($multiple) && $multiple == "true") 
+            multiple="true" 
+        @endif
         name="{{ $name ?? '' }}" 
         id="{{ $id ?? 'select-id' }}" 
         data-livewire="@this"
