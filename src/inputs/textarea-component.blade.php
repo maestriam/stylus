@@ -12,7 +12,7 @@
            {{ $errors->has($name ?? 'input') ? 'is-invalid' : '' }}"
         
     @if (isset($model)) 
-        wire:model.live={{  $model }} 
+        wire:model={{  $model }} 
     @endif    
     @if (isset($required)) required @endif
     @if (isset($autofocus)) autofocus @endif
