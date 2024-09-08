@@ -8,12 +8,13 @@
     type="{{ $type ?? 'text' }}" 
     name="{{ $name ?? 'input' }}"     
     tabindex="{{ $tabindex ?? '1' }}" 
-    
+    wire.loading.attr="readonly"
     class="
         {{ isset($class) ? $class : 'form-control' }}
         {{ $errors->has($name ?? 'input') ? 'is-invalid' : '' }}"
-        
+            
     @if (isset($model)) {{ 'wire:model.live=' . $model }}  @endif    
+    @if (isset($enter)) {{ 'wire:keydown.enter=' . $enter }} @endif
     @if (isset($required)) required @endif
     @if (isset($autofocus)) autofocus @endif
     @if (isset($readonly) && $readonly == true) readonly @endif  

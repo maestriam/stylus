@@ -8,6 +8,7 @@
         @endif
         name="{{ $name ?? '' }}" 
         id="{{ $id ?? 'select-id' }}" 
+        data-placeholder="{{ $placeholder ?? '' }}"       
         data-livewire="@this"
         data-model="{{ $model ?? '' }}"
         class="select2 
