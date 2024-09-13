@@ -17,7 +17,6 @@
   </div>
 
   <x-js-scripts />
-  @stack('scripts')
 
   <!-- Page Specific JS File -->
 </body>
