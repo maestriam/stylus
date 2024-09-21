@@ -13,10 +13,11 @@
         {{ isset($class) ? $class : 'form-control' }}
         {{ $errors->has($name ?? 'input') ? 'is-invalid' : '' }}"
             
-    @if (isset($model)) {{ 'wire:model.live=' . $model }}  @endif    
+    @if (isset($model)) {{ 'wire:model=' . $model }}  @endif    
     @if (isset($enter)) {{ 'wire:keydown.enter=' . $enter }} @endif
     @if (isset($required)) required @endif
     @if (isset($autofocus)) autofocus @endif
+    @if (isset($type) && $type == 'number')  pattern="[0-9.]+" @endif
     @if (isset($readonly) && $readonly == true) readonly @endif  
 />
 

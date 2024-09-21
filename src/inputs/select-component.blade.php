@@ -11,7 +11,7 @@
         data-placeholder="{{ $placeholder ?? '' }}"       
         data-livewire="@this"
         data-model="{{ $model ?? '' }}"
-        class="select2 
+        class="select2
             {{ isset($class) ? $class : 'form-control' }} 
             {{ $errors->has($name ?? 'input') ? ' is-invalid ' : '' }}">
         {{ $slot }}
