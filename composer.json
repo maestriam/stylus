@@ -10,7 +10,6 @@
         }
     ],
     "require": {
-        "maestriam/installers": ">=0.0.1",
         "maestriam/samurai": ">=3.1.5",
         "jantinnerezo/livewire-alert": ">=3.0"       
     },
