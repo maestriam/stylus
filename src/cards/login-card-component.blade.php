@@ -29,14 +29,16 @@
                 </div>
                 <!-- /main -->
                 
+                @if (isset($signUp) && $signUp == true)
                 <div class="mt-5 text-muted text-center">
                     Don't have an account? <a href="auth-register.html">Create One</a>
                 </div>
+                @endif
                 
                 
                 <!-- /header -->
                 <div class="simple-footer">
-                    Copyright &copy; {{ $copyright ?? 'Stisla 2018' }}
+                    Copyright &copy; {{ $copyright ?? 'Maestriam' }}
                 </div>
             </div>
         </div>
