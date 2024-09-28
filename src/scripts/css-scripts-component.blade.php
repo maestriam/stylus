@@ -10,5 +10,6 @@
 <!-- Template CSS -->
 <link rel="stylesheet" href="@public('css/style.css')">
 <link rel="stylesheet" href="@public('css/components.css')">
+<link rel="stylesheet" href="@public('css/custom.css')">
 
 <livewire:styles />
