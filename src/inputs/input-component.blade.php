@@ -13,7 +13,14 @@
         {{ isset($class) ? $class : 'form-control' }}
         {{ $errors->has($name ?? 'input') ? 'is-invalid' : '' }}"
             
-    @if (isset($model)) {{ 'wire:model=' . $model }}  @endif    
+    @if (isset($model)) 
+        @if(isset($live)) 
+            {{ 'wire:model.live=' . $model }}
+        @else
+            {{ 'wire:model=' . $model }}
+        @endif
+    @endif   
+         
     @if (isset($enter)) {{ 'wire:keydown.enter=' . $enter }} @endif
     @if (isset($required)) required @endif
     @if (isset($autofocus)) autofocus @endif

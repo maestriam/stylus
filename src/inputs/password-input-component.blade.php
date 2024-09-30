@@ -24,6 +24,7 @@
         id="{{$id ?? 'password-id'}}" 
         name="{{$name ?? 'password'}}" 
         tabindex="{{ $tabindex ?? '1' }}" 
+        wire.loading.attr="readonly"
         {{ isset($model) ? 'wire:model=' . $model : null }}
         class="{{ isset($class) ? $class . 'form-control' : 'form-control' }}" 
     />
