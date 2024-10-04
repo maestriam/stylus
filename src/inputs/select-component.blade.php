@@ -7,10 +7,11 @@
             multiple="true" 
         @endif
         name="{{ $name ?? '' }}" 
-        id="{{ $id ?? 'select-id' }}" 
-        data-placeholder="{{ $placeholder ?? '' }}"       
         data-livewire="@this"
+        data-maximum-selection-length="{{ $maximum ?? 5 }}"
+        id="{{ $id ?? 'select-id' }}" 
         data-model="{{ $model ?? '' }}"
+        data-placeholder="{{ $placeholder ?? '' }}"       
         class="select2
             {{ isset($class) ? $class : 'form-control' }} 
             {{ $errors->has($name ?? 'input') ? ' is-invalid ' : '' }}">
