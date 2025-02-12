@@ -14,11 +14,16 @@
 <!-- Template JS File -->
 <script src="@public('js/scripts.js')"></script>
 <script src="@public('js/custom.js')"></script>
+<script src="@public('modules/fullcalendar/dist/fullcalendar.min.js')"></script>
 <script src="@public('modules/select2/dist/js/select2.full.min.js')"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <x-livewire-alert::scripts />
 <livewire:scripts />
 <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v1.x.x/dist/livewire-sortable.js"></script>
+
 <x-select2 />
+<x-fullcalendar />
+
+
 
 @stack('scripts')
