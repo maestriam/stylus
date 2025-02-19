@@ -17,6 +17,7 @@
 <script src="@public('modules/fullcalendar/dist/fullcalendar.min.js')"></script>
 <script src="@public('modules/select2/dist/js/select2.full.min.js')"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="@public('modules/bootstrap-daterangepicker/daterangepicker.js')"></script>
 <x-livewire-alert::scripts />
 <livewire:scripts />
 <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v1.x.x/dist/livewire-sortable.js"></script>

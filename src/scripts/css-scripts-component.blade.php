@@ -6,6 +6,7 @@
 <!-- <link rel="stylesheet" href="@public('node_modules/bootstrap-social/bootstrap-social.css')"> -->
 <link rel="stylesheet" href="@public('modules/select2/dist/css/select2.min.css')">
 <link rel="stylesheet" href="@public('modules/fullcalendar/dist/fullcalendar.min.css')">
+<link rel="stylesheet" href="@public('modules/bootstrap-daterangepicker/daterangepicker.css')">
 
 
 <!-- Template CSS -->
