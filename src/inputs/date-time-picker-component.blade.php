@@ -1,18 +1,36 @@
 @if(isset($label))
-    <label for="{{ $id ?? 'time-picker-id' }}">{{ $label }}</label>
+    <label for="{{ isset($name) ? $name .'-id' : 'date-time-picker-id' }}">{{ $label }}</label>
 @endif
 
-<div>
-    <input 
-    @if (isset($model)) 
-        @if(isset($live)) 
-            {{ 'wire:model.live=' . $model }}
-        @else
-            {{ 'wire:model=' . $model }}
-        @endif
-    @endif  
-
+<input 
     type="text" 
-    name="{{ $name ?? 'time-picker-id' }}" 
-    class="form-control datetimepicker" />
-</div>
+    readonly
+    wire:model="{{ $model }}"
+    data-livewire="@this"
+    value="{{ $value ?? '' }}"
+    wire.loading.attr="readonly"
+    tabindex="{{ $tabindex ?? '1' }}" 
+    class="form-control datetimepicker"
+    id="{{ isset($name) ? $name .'-id' : 'date-time-picker-id' }}" 
+    name="{{ $name ?? 'date-time-picker' }}"   
+         
+    @if (isset($required)) required @endif
+    @if (isset($autofocus)) autofocus @endif
+    @if (isset($readonly) && $readonly == true) readonly @endif  
+    @if (isset($enter)) {{ 'wire:keydown.enter=' . $enter }} @endif
+/>
+
+@pushOnce('scripts')
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", () => {
+
+    // @todo: verificar uma forma mais limpa de receber 
+    // os dados do datetimepicket
+    $('.datetimepicker').on('apply.daterangepicker', function() {
+        let prop = $(this).attr('wire:model')
+        @this.set(prop, $(this).val())
+    });
+
+});
+</script>
+@endpushOnce

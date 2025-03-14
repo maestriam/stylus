@@ -6,12 +6,12 @@
         @if(isset($multiple) && $multiple == "true") 
             multiple="true" 
         @endif
-        name="{{ $name ?? '' }}" 
         data-livewire="@this"
-        data-maximum-selection-length="{{ $maximum ?? 5 }}"
+        name="{{ $name ?? '' }}" 
         id="{{ $id ?? 'select-id' }}" 
         data-model="{{ $model ?? '' }}"
         data-placeholder="{{ $placeholder ?? '' }}"       
+        data-maximum-selection-length="{{ $maximum ?? 5 }}"
         class="select2
             {{ isset($class) ? $class : 'form-control' }} 
             {{ $errors->has($name ?? 'input') ? ' is-invalid ' : '' }}">
