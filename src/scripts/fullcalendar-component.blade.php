@@ -2,12 +2,15 @@
 <script type="text/javascript">
 
 $('.fullcalendar').each(function(index) {
+
+    const deleteModalOptions = $(this).data('delete-modal'); 
+
     const calendar = $(this).fullCalendar({
         editable: true,
         height: 'auto',
-        events: $('.fullcalendar').data('events'),
-        eventTextColor: $('.fullcalendar').data('text-color'),
-        eventBackgroundColor: $('.fullcalendar').data('background-color'),
+        events: $(this).data('events'),
+        eventTextColor: $(this).data('text-color'),
+        eventBackgroundColor: $(this).data('background-color'),
         header: {
             left: 'prev,next today',
             center: 'title',
@@ -28,8 +31,8 @@ $('.fullcalendar').each(function(index) {
         Livewire.dispatch('alert', {
             "type": "warning",
             "data": {"id": id},
-            "message": "Atenção!",
-            "options": [],
+            "message": calendar.data('delete-modal-title'),
+            "options": deleteModalOptions,
             "events": {
                 "onConfirmed": {
                     "component": calendar.data('component'),
