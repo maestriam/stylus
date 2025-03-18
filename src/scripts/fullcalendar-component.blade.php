@@ -1,18 +1,50 @@
 @pushOnce('scripts')
 <script type="text/javascript">
 
-
-    $(".fullcalendar").fullCalendar({
+$('.fullcalendar').each(function(index) {
+    const calendar = $(this).fullCalendar({
+        editable: true,
         height: 'auto',
+        events: $('.fullcalendar').data('events'),
+        eventTextColor: $('.fullcalendar').data('text-color'),
+        eventBackgroundColor: $('.fullcalendar').data('background-color'),
         header: {
             left: 'prev,next today',
             center: 'title',
             right: 'month,agendaWeek,agendaDay'
         },
-        editable: true,
-        eventTextColor: $('.fullcalendar').data('text-color'),
-        eventBackgroundColor: $('.fullcalendar').data('background-color'),
-        events: $('.fullcalendar').data('collection'),
+        eventRender: (event, element) => {
+            let html = `<i 
+                data-id="${event.id}" 
+                class="fc-event-remove fas fa-trash" />`;
+
+            let deleteBtn = $(html);            
+            element.append(deleteBtn);
+        }
     });
+
+    $(document).on('click', '.fc-event-remove', function() {
+        let id = $(this).data('id'); 
+        Livewire.dispatch('alert', {
+            "type": "warning",
+            "data": {"id": id},
+            "message": "Atenção!",
+            "options": [],
+            "events": {
+                "onConfirmed": {
+                    "component": calendar.data('component'),
+                    "listener": calendar.data('on-remove')
+                }
+            },
+        });
+    });
+
+    Livewire.on(calendar.data('on-reload'), function(data) {     
+        let events = JSON.parse(data)
+        calendar.fullCalendar("removeEvents");
+        calendar.fullCalendar("addEventSource", events);
+    })
+});
+
 </script>
 @endpushOnce
