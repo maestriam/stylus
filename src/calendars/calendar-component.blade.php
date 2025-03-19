@@ -3,6 +3,7 @@
         id="fullcalendar"
         data-component="{{ $component }}"
         data-events="{{ $events ?? '[]' }}"
+        data-on-click="{{ $onClick ?? 'styla::calendar.on-click' }}"
         data-on-remove="{{ $onRemove ?? 'styla::calendar.on-remove' }}"
         data-on-reload="{{ $onReload ?? 'styla::calendar.on-reload' }}"
         data-delete-modal="{{ $deleteModal ?? '[]' }}"        

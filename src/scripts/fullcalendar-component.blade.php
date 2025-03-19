@@ -1,9 +1,11 @@
 @pushOnce('scripts')
-<script type="text/javascript">
+<script>
 
 $('.fullcalendar').each(function(index) {
 
+    const component = $(this).data('component')
     const deleteModalOptions = $(this).data('delete-modal'); 
+
 
     const calendar = $(this).fullCalendar({
         editable: true,
@@ -23,6 +25,14 @@ $('.fullcalendar').each(function(index) {
 
             let deleteBtn = $(html);            
             element.append(deleteBtn);
+        },
+        eventClick: (event, element) => {
+
+            if ($(element.target).is('i')) return;
+
+            let onClick = $(this).data('on-click')
+            
+            Livewire.dispatchTo(component, onClick, { id: event.id })
         }
     });
 
@@ -35,7 +45,7 @@ $('.fullcalendar').each(function(index) {
             "options": deleteModalOptions,
             "events": {
                 "onConfirmed": {
-                    "component": calendar.data('component'),
+                    "component": component,
                     "listener": calendar.data('on-remove')
                 }
             },

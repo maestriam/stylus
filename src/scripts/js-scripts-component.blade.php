@@ -25,6 +25,4 @@
 <x-select2 />
 <x-fullcalendar />
 
-
-
 @stack('scripts')
