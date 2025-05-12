@@ -1,10 +1,8 @@
 <div class="card {{ $class ?? '' }}">        
 
     <!-- header -->
-    <div class="card-header">
-        
+    <div class="card-header">        
         <h4>{{ $title ?? 'Card Title' }}</h4>        
-        
         <div class="card-header-action">            
             @if(isset($actions))    
                 {{ $actions }}        
