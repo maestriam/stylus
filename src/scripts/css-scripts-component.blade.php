@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="@public('modules/select2/dist/css/select2.min.css')">
 <link rel="stylesheet" href="@public('modules/fullcalendar/dist/fullcalendar.min.css')">
 <link rel="stylesheet" href="@public('modules/bootstrap-daterangepicker/daterangepicker.css')">
+<link rel="stylesheet" href="@public('modules/ionicons201/css/ionicons.min.css')">
 
 
 <!-- Template CSS -->

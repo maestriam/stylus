@@ -22,6 +22,7 @@
 <livewire:scripts />
 <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v1.x.x/dist/livewire-sortable.js"></script>
 
+
 <x-select2 />
 <x-fullcalendar />
 
