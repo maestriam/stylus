@@ -1,3 +1,5 @@
-<div class="row {{ isset($center) && $center === true ? 'justify-content-md-center' : '' }} ">
+<div class="row 
+    @isset($center) {{ 'justify-content-md-center' }} @endisset
+    {{ $class ?? '' }}" >
     {{ $slot }}
 </div>
