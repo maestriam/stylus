@@ -14,8 +14,7 @@
         data-maximum-selection-length="{{ $maximum ?? 5 }}"
         class="select2
             {{ isset($class) ? $class : 'form-control' }} 
-            {{ $errors->has($name ?? 'input') ? ' is-invalid ' : '' }}">
-        {{ $slot }}
+            {{ $errors->has($name ?? 'input') ? ' is-invalid ' : '' }}">{{ $slot }}
     </select>
 </div>
 
