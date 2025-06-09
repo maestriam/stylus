@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="@public('modules/bootstrap-daterangepicker/daterangepicker.css')">
 <link rel="stylesheet" href="@public('modules/ionicons201/css/ionicons.min.css')">
 
-
 <!-- Template CSS -->
 <link rel="stylesheet" href="@public('css/style.css')">
 <link rel="stylesheet" href="@public('css/components.css')">

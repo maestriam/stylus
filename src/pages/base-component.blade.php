@@ -15,9 +15,7 @@
       {{ $slot }}
     </div>
   </div>
-
+  
   <x-js-scripts />
-
-  <!-- Page Specific JS File -->
 </body>
 </html>

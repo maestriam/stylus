@@ -1,5 +1,5 @@
 <button 
-    @if(isset($click)) wire:click="{{ $click }}" @endif
+    @isset($click) wire:click="{{ $click }}" @endisset
     tabindex="{{ $tabindex ?? '0'}}"
     id="{{ $id ?? 'btn' }}"
     wire:loading.class="disabled btn-progress"
