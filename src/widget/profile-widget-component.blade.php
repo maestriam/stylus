@@ -17,7 +17,7 @@
     <div class="card-body p-0">
         <div class="row">
             @isset($email)
-            <div class="col-2">
+            <div class="col-3">
                 <div class="tickets-list">
                     <span href="#" class="ticket-item">                    
                         <div class="ticket-info">
