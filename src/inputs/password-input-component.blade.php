@@ -1,4 +1,4 @@
-<div class="form-group">
+<div class="form-group" x-data="{ showPassword: false }">
 
     <!-- label -->
     <div class="d-block">   
@@ -20,7 +20,7 @@
     <!-- input -->
     <input 
         required
-        type="password" 
+        :type="open ? 'text' : 'password'"
         id="{{$id ?? 'password-id'}}" 
         name="{{$name ?? 'password'}}" 
         tabindex="{{ $tabindex ?? '1' }}" 
@@ -29,12 +29,22 @@
         class="{{ isset($class) ? $class . 'form-control' : 'form-control' }}" 
     />
     <!-- /input -->
+
+    @isset($togglePassword)
+    <label class="mt-2" >
+        <input type="checkbox" name="custom-switch-checkbox" @click="showPassword = ! showPassword" class="custom-switch-input">
+        <span class="custom-switch-indicator"></span>
+        <span class="custom-switch-description">Exibir senha</span>        
+    </label>
+    @endisset
     
-    <!-- error message -->
-    @error($name ?? 'password')
-    <div class="text-danger">{{ $message }}</div>
-    @enderror
-    <!-- /error message -->
+    @isset($errors)
+        <!-- error message -->
+        @error($name ?? 'password')
+        <div class="text-danger">{{ $message }}</div>
+        @enderror
+        <!-- /error message -->
+    @endisset
 </div>
 
 @if(isset($rememberMe)) 

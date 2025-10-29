@@ -1,6 +1,6 @@
 {
     "name": "maestriam/stylus",
-    "description": "A new awsome theme is comming!",
+    "description": "A new awesome theme is comming!",
     "type": "blade-theme",
     "license": "GPL-3.0",
     "authors": [
@@ -10,13 +10,18 @@
         }
     ],
     "require": {
-        "maestriam/samurai": ">=3.1.5",
-        "jantinnerezo/livewire-alert": ">=4.0.2"       
+        "maestriam/samurai": ">=3.1.5"
     },
     "scripts": {
         "post-autoload-dump": [
-            "@php artisan samurai:publish maestriam/stylus",
-            "@php artisan samurai:use maestriam/stylus"
         ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Maestriam\\Stylus\\Tests\\": "tests/"
+        }
     }
 }
