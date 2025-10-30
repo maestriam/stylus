@@ -39,9 +39,7 @@ class PasswordInputTest extends TestCase
     {
         $template = <<<HTML
         <div>
-            <x-password-input 
-                :id="\$id" 
-                :name="\$name" />    
+            <x-password-input :id="\$id" :name="\$name" />    
         </div>
         HTML;
 
