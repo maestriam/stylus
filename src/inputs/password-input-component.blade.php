@@ -20,7 +20,7 @@
     <!-- input -->
     <input 
         required
-        :type="open ? 'text' : 'password'"
+        :type="showPassword ? 'text' : 'password'"
         id="{{$id ?? 'password-id'}}" 
         name="{{$name ?? 'password'}}" 
         tabindex="{{ $tabindex ?? '1' }}" 

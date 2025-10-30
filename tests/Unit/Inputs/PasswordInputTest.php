@@ -10,12 +10,17 @@ class PasswordInputTest extends TestCase
     public function testRender()
     {
         $data = [
-            'id'    => 'id-password-test',
-            'name'  => 'name-password-test',
-            'model' => 'model-password-test'
+            'id'   => 'id-password-test',
+            'name' => 'name-password-test',
         ];
+
+        $template = <<<HTML
+        <div>
+            <x-password-input :id="\$id" :name="\$name" />    
+        </div>
+        HTML;
         
-        $html = $this->template($data);
+        $html = Blade::render($template, $data);
 
         $this->assertStringContainsString("id=\"{$data['id']}", $html);
         $this->assertStringContainsString("for=\"{$data['id']}", $html);
@@ -35,14 +40,18 @@ class PasswordInputTest extends TestCase
         $this->assertStringContainsString("Exibir senha", $html);
     }
 
-    private function template(array $data) : string
+    public function testToogleCondition()
     {
-        $template = <<<HTML
+       $template = <<<HTML
         <div>
-            <x-password-input :id="\$id" :name="\$name" />    
+            <x-password-input :toggle-password="true" />    
         </div>
         HTML;
 
-        return Blade::render($template, $data); 
+        $html = Blade::render($template); 
+
+        $condition = "showPassword ? 'text' : 'password'";
+
+        $this->assertStringContainsString($condition, $html); 
     }
 }
